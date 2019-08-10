@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Klassen und Kursfotos</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+
+    <link rel="shortcut icon" type="image/png" href="http://gymnasium-kyritz.de/wordpress/wp-content/uploads/2014/03/schullogo.png" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="kuk.js" charset="utf-8"></script>
+    <script src="phonegap.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Merriweather|Oswald&display=swap" rel="stylesheet">
+    <script src="../../libs/cookie.js"></script>
+    <script>
+      fontFamily = Cookies.get('font-family');
+      fontSize = Cookies.get('font-size');
+      theme = Cookies.get('theme');
+      console.log(fontFamily);
+      console.log(fontSize);
+      console.log(theme);
+
+      function apply(){
+          document.body.style.fontFamily = fontFamily;
+          document.body.style.fontSize = fontSize+"px";
+      
+          if(theme == "Hell"){
+              document.body.style.backgroundColor = "white";
+          }else if(theme=="Dunkel"){
+              document.body.style.backgroundColor = "grey";
+          }
+      }
+</script>
+  </head>
+
+<body onload="apply()">
+  <a href="../../index.html"><img width=50 src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Back_Arrow.svg/480px-Back_Arrow.svg.png"></img></a>
+
+  <h1>Klassen und Kursfotos</h1>
+
+  <div id="pics">
+
+  </div>
+</body>
+</html>

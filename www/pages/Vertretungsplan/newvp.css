@@ -1,0 +1,40 @@
+html, body{
+	background-color: #F5F5F5;
+    font-size: 12pt;
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+table{
+	width: 100%;
+	border-collapse: collapse;
+    border-spacing: 6px;
+}
+
+table, th, td{
+	border-bottom: 1px solid black; 
+	border-left: 1px solid #dddddd; 
+	border-right: 1px solid #dddddd;
+}
+
+tr:nth-child(even){
+	background-color: #DCDCDC;
+}
+
+#container{
+    transform: rotate(90deg);
+    transform-origin:bottom left;
+    
+    position: relative;
+    top: -100vw;
+    left: 0px;
+
+    
+    height:100vw;
+    width:100vh;
+
+    overflow: auto;
+
+     font-family: Tahoma, Geneva, sans-serif;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Einstellungen</title>
+    <link rel="shortcut icon" type="image/png" href="http://gymnasium-kyritz.de/wordpress/wp-content/uploads/2014/03/schullogo.png" />
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Merriweather|Oswald&display=swap" rel="stylesheet">
+
+    <script src="../../libs/cookie.js"></script>
+    <script src="../../libs/p5.js"></script>
+    <script src="../../libs/p5.dom.js"></script>
+    <script src="settings.js"></script>
+    <style>
+        #container{
+            width: 100%;
+        }
+        
+        .slider{
+            -webkit-appearance: none;  /* Override default CSS styles */
+            appearance: none;
+            width: 100%; /* Full-width */
+            height: 25px; /* Specified height */
+            background: #d3d3d3; /* Grey background */
+            outline: none; /* Remove outline */
+            opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+            -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+            transition: opacity .2s;
+        }
+
+        .slider::-webkit-slider-thumb {
+              -webkit-appearance: none; /* Override default look */
+              appearance: none;
+              width: 25px; /* Set a specific slider handle width */
+              height: 25px; /* Slider handle height */
+              background: black; /* Green background */
+              cursor: pointer; /* Cursor on hover */
+            }
+
+        .slider::-moz-range-thumb {
+              width: 25px; /* Set a specific slider handle width */
+              height: 25px; /* Slider handle height */
+              background: #4CAF50; /* Green background */
+              cursor: pointer; /* Cursor on hover */
+        }/* The container must be positioned relative: */
+
+        select{
+            width: 100%;
+            height: 40px;
+            background-color: #e8e8e8;
+        }
+
+        button{
+            width: 50%;
+            height: 40px;
+            background: lightgray;
+        }
+
+    </style>
+</head>
+
+<body onload="applyStyle()">
+    <a href="../../index.html"><img style="opacity: 1;"src="https://png.icons8.com/metro/540/circled-left-2.png" width="50" height="50"></a>
+
+    <h1 align="center">Einstellungen</h1>
+
+    <div align="center" id="holder"></div>
+    
+    <div align="center">
+    <button id="apply">Anwenden</button>
+    </div>
+</body>
+
+</html>

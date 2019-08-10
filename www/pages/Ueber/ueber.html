@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Über</title>
+
+    <link rel="shortcut icon" type="image/png" href="http://gymnasium-kyritz.de/wordpress/wp-content/uploads/2014/03/schullogo.png" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+
+    <script src="../../libs/cookie.js"></script>
+    <script>
+        fontFamily = Cookies.get('font-family');
+        fontSize = Cookies.get('font-size');
+        theme = Cookies.get('theme');
+        
+        function apply(){
+            document.body.style.fontFamily = fontFamily;
+            if(fontSize <= 26){
+              document.body.style.fontSize = fontSize+"px";
+            }else{
+              document.body.style.fontSize = "26px";
+            }
+        
+            if(theme == "Hell"){
+                document.body.style.backgroundColor = "white";
+            }else if(theme=="Dunkel"){
+                document.body.style.backgroundColor = "grey";
+            }
+        }
+      </script>
+  </head>
+
+<body onload="apply()">
+  <a href="../../index.html"><img width=50 src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Back_Arrow.svg/480px-Back_Arrow.svg.png"></img></a>
+
+  <h1 class="display-4">Über</h1>
+
+        <p><h1 class="display-5">Gymnasium Kyritz App</h1></p>
+        <p align="center"> Version: 1.1.0</p>
+        <br>
+        <p>by <b>Günther Grützmacher</b>@2019</br>guenthergruetzmacher@gmail.com</p>
+        <p>
+            realisiert mit Phonegap, p5.js und jQuery</br>
+        </p>
+        <p>
+            Informationen basierend auf der Schulwebsite:<br>
+            <a href="gymnasium-kyritz.de">gymnasium-kyritz.de</a>
+        </p>
+  
+</body>
+</html>

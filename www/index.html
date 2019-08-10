@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Merriweather|Oswald&display=swap" rel="stylesheet">
+<script src="libs/cookie.js"></script>
+<style>
+html, body{
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+<script src="main.js"></script>
+</head>
+<body onload="apply()">
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="pages/Vertretungsplan/newvp.html">Vertretungsplan</a>
+  <a href="pages/Aktuelle Beitraege/ab.html">Aktuelle Beiträge</a>
+  <a href="pages/Klassen und Kursfotos/kuk.html">Klassen und Kursfotos</a>
+  <a href="pages/Literaturblog/literatur.html">Literatur Blog</a>
+  <a href="pages/Ueber/ueber.html">Über</a>
+</div>
+
+<img src="img/menu_icon.png" style="float: left; margin-left: -5px; margin-top: 10px; margin-right: 5px; margin-bottom: 10px;" width="20%"onclick="openNav()"><div style="font-size:36px;" ></div>
+<p style="font-size: 30px;" align="center">Gymnasium Kyritz App</p>
+
+<img src="img/schullogo.png" style="padding-left: 10px;" width="100%" align="center">
+<a href="pages/Einstellungen/settings.html"><img style="padding-left: 10px;" src="img/settings_icon.png" width="15%"></a>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+   
+</body>
+</html> 

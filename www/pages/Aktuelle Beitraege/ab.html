@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aktuelles</title>
+  <link rel="shortcut icon" type="image/png" href="http://gymnasium-kyritz.de/wordpress/wp-content/uploads/2014/03/schullogo.png" />
+  <script src="phonegap.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Merriweather|Oswald&display=swap" rel="stylesheet">
+  <script src="../../libs/cookie.js"></script>
+  <script>
+    fontFamily = Cookies.get('font-family');
+    fontSize = Cookies.get('font-size');
+    console.log(fontFamily);
+    console.log(fontSize);
+
+    function apply(){
+        document.body.style.fontFamily = fontFamily;
+        document.body.style.fontSize = fontSize+"px";
+    
+    }
+  </script>
+</head>
+<body onload="apply()" >
+
+    <h1>Aktuelles</h1>
+    <a href="../../index.html"><img src="https://png.icons8.com/metro/540/circled-left-2.png" width="50" height="50"></a>    
+
+    <div id="accordion">
+
+  <div class="card">
+    <div class="card-header">
+      <a class="card-link" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+        <p id="ab"></p>
+        <script type="text/javascript">
+                var url = "http://gymnasium-kyritz.de/wordpress/wp-json/wp/v2/posts";
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var myObj = JSON.parse(this.responseText);
+                        
+                        document.getElementById("ab").innerHTML = myObj[0].title.rendered;
+                    }
+                };
+                xmlhttp.open("GET", url, true);
+                xmlhttp.send();
+        </script>
+      </a>
+    </div>
+    <div id="collapseOne" class="collapse show">
+      <div class="card-body">
+        <style type="text/css">
+            img{max-width: 100%; height: auto;}
+        </style>
+        <p id="ac" onload="myFunction()"></p>
+        <script type="text/javascript">
+                var url = "http://gymnasium-kyritz.de/wordpress/wp-json/wp/v2/posts";
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var myObj = JSON.parse(this.responseText);
+                        
+                        document.getElementById("ac").innerHTML = myObj[0].content.rendered;
+                    }
+                };
+                xmlhttp.open("GET", url, true);
+                xmlhttp.send();
+        </script>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <a class="collapsed card-link" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+        <p id="bb"></p>
+        <script type="text/javascript">
+                var url = "http://gymnasium-kyritz.de/wordpress/wp-json/wp/v2/posts";
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var myObj = JSON.parse(this.responseText);
+                        
+                        document.getElementById("bb").innerHTML = myObj[1].title.rendered;
+                    }
+                };
+                xmlhttp.open("GET", url, true);
+                xmlhttp.send();
+        </script>
+      </a>
+    </div>
+    <div id="collapseTwo" class="collapse">
+      <div class="card-body">
+        <p id="bc"></p>
+        <script type="text/javascript">
+                var url = "http://gymnasium-kyritz.de/wordpress/wp-json/wp/v2/posts";
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var myObj = JSON.parse(this.responseText);
+                        
+                        document.getElementById("bc").innerHTML = myObj[1].content.rendered;
+                    }
+                };
+                xmlhttp.open("GET", url, true);
+                xmlhttp.send();
+        </script>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <a class="collapsed card-link" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+        <p id="cb"></p>
+        <script type="text/javascript">
+                var url = "http://gymnasium-kyritz.de/wordpress/wp-json/wp/v2/posts";
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var myObj = JSON.parse(this.responseText);
+                        
+                        document.getElementById("cb").innerHTML = myObj[2].title.rendered;
+                    }
+                };
+                xmlhttp.open("GET", url, true);
+                xmlhttp.send();
+        </script>
+      </a>
+    </div>
+    <div id="collapseThree" class="collapse">
+      <div class="card-body">
+        <p id="cc"></p>
+        <script type="text/javascript">
+                var url = "http://gymnasium-kyritz.de/wordpress/wp-json/wp/v2/posts";
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var myObj = JSON.parse(this.responseText);
+                        
+                        document.getElementById("cc").innerHTML = myObj[2].content.rendered;
+                    }
+                };
+                xmlhttp.open("GET", url, true);
+                xmlhttp.send();
+        </script>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <a class="collapsed card-link" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+        <p id="db"></p>
+        <script type="text/javascript">
+                var url = "http://gymnasium-kyritz.de/wordpress/wp-json/wp/v2/posts";
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var myObj = JSON.parse(this.responseText);
+                        
+                        document.getElementById("db").innerHTML = myObj[3].title.rendered;
+                    }
+                };
+                xmlhttp.open("GET", url, true);
+                xmlhttp.send();
+        </script>
+      </a>
+    </div>
+    <div id="collapseFour" class="collapse">
+      <div class="card-body">
+        <p id="dc"></p>
+        <script type="text/javascript">
+                var url = "http://gymnasium-kyritz.de/wordpress/wp-json/wp/v2/posts";
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var myObj = JSON.parse(this.responseText);
+                        
+                        document.getElementById("dc").innerHTML = myObj[3].content.rendered;
+                    }
+                };
+                xmlhttp.open("GET", url, true);
+                xmlhttp.send();
+        </script>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <a class="collapsed card-link" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+        <p id="eb"></p>
+        <script type="text/javascript">
+                var url = "http://gymnasium-kyritz.de/wordpress/wp-json/wp/v2/posts";
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var myObj = JSON.parse(this.responseText);
+                        
+                        document.getElementById("eb").innerHTML = myObj[4].title.rendered;
+                    }
+                };
+                xmlhttp.open("GET", url, true);
+                xmlhttp.send();
+        </script>
+      </a>
+    </div>
+    <div id="collapseFive" class="collapse">
+      <div class="card-body">
+        <p id="ec"></p>
+        <script type="text/javascript">
+                var url = "http://gymnasium-kyritz.de/wordpress/wp-json/wp/v2/posts";
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var myObj = JSON.parse(this.responseText);
+                        
+                        document.getElementById("ec").innerHTML = myObj[4].content.rendered;
+                    }
+                };
+                xmlhttp.open("GET", url, true);
+                xmlhttp.send();
+        </script>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <a class="collapsed card-link" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
+        <p id="fb"></p>
+        <script type="text/javascript">
+                var url = "http://gymnasium-kyritz.de/wordpress/wp-json/wp/v2/posts";
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var myObj = JSON.parse(this.responseText);
+                        
+                        document.getElementById("fb").innerHTML = myObj[5].title.rendered;
+                    }
+                };
+                xmlhttp.open("GET", url, true);
+                xmlhttp.send();
+        </script>
+      </a>
+    </div>
+    <div id="collapseSix" class="collapse">
+      <div class="card-body">
+        <p id="fc"></p>
+        <script type="text/javascript">
+                var url = "http://gymnasium-kyritz.de/wordpress/wp-json/wp/v2/posts";
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var myObj = JSON.parse(this.responseText);
+                        
+                        document.getElementById("fc").innerHTML = myObj[5].content.rendered;
+                    }
+                };
+                xmlhttp.open("GET", url, true);
+                xmlhttp.send();
+        </script>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <a class="collapsed card-link" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">
+        <p id="gb"></p>
+        <script type="text/javascript">
+                var url = "http://gymnasium-kyritz.de/wordpress/wp-json/wp/v2/posts";
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var myObj = JSON.parse(this.responseText);
+                        
+                        document.getElementById("gb").innerHTML = myObj[6].title.rendered;
+                    }
+                };
+                xmlhttp.open("GET", url, true);
+                xmlhttp.send();
+        </script>
+      </a>
+    </div>
+    <div id="collapseSeven" class="collapse">
+      <div class="card-body">
+        <p id="gc"></p>
+        <script type="text/javascript">
+                var url = "http://gymnasium-kyritz.de/wordpress/wp-json/wp/v2/posts";
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var myObj = JSON.parse(this.responseText);
+                        
+                        document.getElementById("gc").innerHTML = myObj[6].content.rendered;
+                    }
+                };
+                xmlhttp.open("GET", url, true);
+                xmlhttp.send();
+        </script>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <a class="collapsed card-link" data-toggle="collapse" data-parent="#accordion" href="#collapseEight">
+        <p id="hb"></p>
+        <script type="text/javascript">
+                var url = "http://gymnasium-kyritz.de/wordpress/wp-json/wp/v2/posts";
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var myObj = JSON.parse(this.responseText);
+                        
+                        document.getElementById("hb").innerHTML = myObj[7].title.rendered;
+                    }
+                };
+                xmlhttp.open("GET", url, true);
+                xmlhttp.send();
+        </script>
+      </a>
+    </div>
+    <div id="collapseEight" class="collapse">
+      <div class="card-body">
+        <p id="hc"></p>
+        <script type="text/javascript">
+                var url = "http://gymnasium-kyritz.de/wordpress/wp-json/wp/v2/posts";
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var myObj = JSON.parse(this.responseText);
+                        
+                        document.getElementById("hc").innerHTML = myObj[7].content.rendered;
+                    }
+                };
+                xmlhttp.open("GET", url, true);
+                xmlhttp.send();
+        </script>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <a class="collapsed card-link" data-toggle="collapse" data-parent="#accordion" href="#collapseNine">
+        <p id="ib"></p>
+        <script type="text/javascript">
+                var url = "http://gymnasium-kyritz.de/wordpress/wp-json/wp/v2/posts";
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var myObj = JSON.parse(this.responseText);
+                        
+                        document.getElementById("ib").innerHTML = myObj[8].title.rendered;
+                    }
+                };
+                xmlhttp.open("GET", url, true);
+                xmlhttp.send();
+        </script>
+      </a>
+    </div>
+    <div id="collapseNine" class="collapse">
+      <div class="card-body">
+        <p id="ic"></p>
+        <script type="text/javascript">
+                var url = "http://gymnasium-kyritz.de/wordpress/wp-json/wp/v2/posts";
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var myObj = JSON.parse(this.responseText);
+                        
+                        document.getElementById("ic").innerHTML = myObj[8].content.rendered;
+                    }
+                };
+                xmlhttp.open("GET", url, true);
+                xmlhttp.send();
+        </script>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <a class="collapsed card-link" data-toggle="collapse" data-parent="#accordion" href="#collapseTen">
+        <p id="jb"></p>
+        <script type="text/javascript">
+                var url = "http://gymnasium-kyritz.de/wordpress/wp-json/wp/v2/posts";
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var myObj = JSON.parse(this.responseText);
+                        
+                        document.getElementById("jb").innerHTML = myObj[9].title.rendered;
+                    }
+                };
+                xmlhttp.open("GET", url, true);
+                xmlhttp.send();
+        </script>
+      </a>
+    </div>
+    <div id="collapseTen" class="collapse">
+      <div class="card-body">
+        <p id="jc"></p>
+        <script type="text/javascript">
+                var url = "http://gymnasium-kyritz.de/wordpress/wp-json/wp/v2/posts";
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var myObj = JSON.parse(this.responseText);
+                        
+                        document.getElementById("jc").innerHTML = myObj[9].content.rendered;
+                    }
+                };
+                xmlhttp.open("GET", url, true);
+                xmlhttp.send();
+        </script>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
